@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const connectDB = require("./config/db");
+const authRouter = require("./src/routes/authRoute");
 const userRouter = require("./src/routes/userRoute");
 
 const server = express();
@@ -12,7 +13,8 @@ server.use(express.json());
 server.use(cors());
 
 // Custom Routes
-server.use("/user", userRouter);
+server.use("/auth", authRouter);
+server.use("/users", userRouter);
 
 // Home Route
 server.get("/", (req, res) => {

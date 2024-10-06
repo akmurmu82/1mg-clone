@@ -15,7 +15,6 @@ const loginUser = async (req, res) => {
 
     // Decrypting the password
     const isMatch = await bcrypt.compare(password, existingUser.password);
-    console.log(isMatch);
 
     if (!isMatch) {
       return res.status(403).json({ message: "Wrong password!" });
