@@ -1,0 +1,5 @@
+
+401 - unauthorised
+403 - forbidden (lack of Authorization)
+400 - Bad Request (Request can't be understood by the server)
+204 - No content (Request successful, but no content to show/return)
