@@ -4,6 +4,7 @@ require("dotenv").config();
 const connectDB = require("./config/db");
 const authRouter = require("./src/routes/authRoute");
 const userRouter = require("./src/routes/userRoute");
+const productRouter = require("./src/routes/productRoute");
 
 const server = express();
 const port = process.env.PORT;
@@ -15,6 +16,7 @@ server.use(cors());
 // Custom Routes
 server.use("/auth", authRouter);
 server.use("/users", userRouter);
+server.use("/products", productRouter);
 
 // Home Route
 server.get("/", (req, res) => {
