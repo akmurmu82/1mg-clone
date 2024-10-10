@@ -4,7 +4,7 @@ const updateProduct = require('../controllers/product/updateProduct');
 const deleteProduct = require('../controllers/product/deleteProduct');
 const addProduct = require('../controllers/product/addProduct');
 const fetchAllProducts = require('../controllers/product/fetchAllProducts');
-const authenticate = require('../middlewares/authenticate');
+const authenticate = require('../middlewares/isAuthenticated');
 
 const productRouter = express.Router();
 
