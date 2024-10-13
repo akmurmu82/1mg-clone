@@ -14,6 +14,7 @@ import {
     InputLeftAddon,
     InputRightAddon,
     InputRightElement,
+    useDisclosure,
 } from '@chakra-ui/react';
 import { FiChevronDown } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
@@ -21,8 +22,14 @@ import { RiShoppingCart2Line } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 import { MdMyLocation } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
+import LoginModal from "../landing/LoginModal"
+import SignupModal from "../landing/SignupModal"
 
 const Navbar = () => {
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const { isOpen: isOpenSignup, onOpen: onOpenSignup, onClose: onCloseSignup } = useDisclosure();
+
     return (
         <Box bg="white" boxShadow="sm">
             {/* Top Section */}
@@ -51,13 +58,15 @@ const Navbar = () => {
                 {/* Right Section (Offers, Login, Cart) */}
                 <Flex alignItems="center" justifyContent="space-between" w={'26%'}>
 
-                    <Link>
+                    <Button bg="transparent" _hover={{ bg: "transparent" }} onClick={onOpen}>
                         Login
-                    </Link>
+                    </Button>
+                    <LoginModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
                     <Divider color={'black'} orientation='vertical' h={'20px'} />
-                    <Link >
+                    <Button bg="transparent" _hover={{ bg: "transparent" }} onClick={onOpenSignup}>
                         Sign Up
-                    </Link>
+                    </Button>
+                    <SignupModal isOpen={isOpenSignup} onOpen={onOpenSignup} onClose={onCloseSignup} />
                     <Link>
                         Offers
                     </Link>
