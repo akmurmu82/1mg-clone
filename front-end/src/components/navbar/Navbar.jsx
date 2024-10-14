@@ -61,12 +61,12 @@ const Navbar = () => {
                     <Button bg="transparent" _hover={{ bg: "transparent" }} onClick={onOpen}>
                         Login
                     </Button>
-                    <LoginModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+                    <LoginModal isOpen={isOpen} onClose={onClose} onOpenSignup={onOpenSignup} />
                     <Divider color={'black'} orientation='vertical' h={'20px'} />
                     <Button bg="transparent" _hover={{ bg: "transparent" }} onClick={onOpenSignup}>
                         Sign Up
                     </Button>
-                    <SignupModal isOpen={isOpenSignup} onOpen={onOpenSignup} onClose={onCloseSignup} />
+                    <SignupModal isOpen={isOpenSignup} onOpen={onOpenSignup} onOpenLogin={onOpen} onClose={onCloseSignup} />
                     <Link>
                         Offers
                     </Link>

@@ -11,6 +11,7 @@ import {
   Button,
   Link,
   Flex,
+  useToast
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
@@ -18,19 +19,34 @@ import { useState } from 'react';
 import axios from "axios";
 const baseBackendUrl = import.meta.env.VITE_BASE_BACKEND_API
 
-const LoginModal = ({ isOpen, onClose }) => {
+const LoginModal = ({ isOpen, onClose, onOpenSignup }) => {
+  const toast = useToast()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
 
-  // Oops! We could not find an account associated with your email address. Please try with a different email/number
   const handleLogin = async () => {
     try {
       let res = await axios.post(`${baseBackendUrl}/auth/login`, { email, password })
       console.log(res)
       if (res.status == 200) {
         localStorage.setItem("authToken", JSON.stringify(res.data.token))
+        setErrorMessage("")
+        toast({
+          position: "top",
+          title: "Login Succussful.",
+          description: "We've created your account for you.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+        onClose()
       }
     } catch (error) {
+      if (error.status == 404) {
+        console.log('user not registered!')
+        setErrorMessage(error.response.data.message)
+      }
       console.log(error)
     }
   }
@@ -76,13 +92,17 @@ const LoginModal = ({ isOpen, onClose }) => {
               </Text>
               <Input
                 placeholder="Enter Email ID or Mobile Number"
-                mb={4}
+                mb={1}
                 name={"email"}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 borderColor="red.500"
                 focusBorderColor="red.500"
               />
+              {errorMessage &&
+                <Text fontSize="sm" color="red.600" mb={6}>
+                  Oops! We could not find an account associated with your email address. Please try with a different email/number
+                </Text>}
               <Input
                 placeholder="Enter Password"
                 name={"password"}
@@ -96,7 +116,10 @@ const LoginModal = ({ isOpen, onClose }) => {
                 LOGIN
               </Button>
               <Text fontSize="sm" color="gray.600" mb={2}>
-                New on 1mg? <Link color="red.500">Sign Up</Link>
+                New on 1mg? <Link color="red.500" cursor={'pointer'} onClick={() => {
+                  onClose()
+                  onOpenSignup()
+                }}>Sign Up</Link>
               </Text>
               <Text fontSize="xs" color="gray.500" mb={4}>
                 By logging in, you agree to our{' '}
@@ -120,4 +143,5 @@ export default LoginModal;
 LoginModal.propTypes = {
   isOpen: PropTypes.bool,
   onClose: PropTypes.func,
+  onOpenSignup: PropTypes.func,
 }

@@ -13,22 +13,47 @@ import {
   Flex,
   HStack,
   Checkbox,
+  useToast,
 } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import axios from "axios";
 import { useState } from 'react';
 const baseBackendUrl = import.meta.env.VITE_BASE_BACKEND_API
 
-const SignupModal = ({ isOpen, onClose }) => {
+const SignupModal = ({ isOpen, onClose, onOpenLogin }) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
+  const toast = useToast();
 
   const handleSignup = async () => {
     console.log({ email, password })
     try {
       let res = await axios.post(`${baseBackendUrl}/auth/register`, { email, password })
       console.log(res)
+      setErrorMessage("")
+      toast({
+        position: "top",
+        title: "Account created.",
+        description: "We've created your account for you.",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+      onClose()
     } catch (error) {
+      if (error.status == 409) {
+        console.log('user already registered!')
+        toast({
+          position: "top",
+          title: "Can't create account.",
+          description: "user already registered!",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
+        setErrorMessage(error.response.data.message)
+      }
       console.log(error)
     }
   }
@@ -74,12 +99,16 @@ const SignupModal = ({ isOpen, onClose }) => {
               </Text>
               <Input
                 placeholder="Enter Email ID or Mobile Number"
-                mb={4}
+                mb={1}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 borderColor="red.500"
                 focusBorderColor="red.500"
               />
+              {errorMessage &&
+                < Text fontSize="sm" color="red.600" mb={2}>
+                  {errorMessage}
+                </Text>}
               <Text fontSize="sm" color="gray.600" mb={2}>
                 Enter password
               </Text>
@@ -101,7 +130,10 @@ const SignupModal = ({ isOpen, onClose }) => {
                 Sign Up
               </Button>
               <Text fontSize="sm" color="gray.600" mb={2}>
-                Have an account? <Link color="red.500">Login</Link>
+                Have an account? <Link color="red.500" cursor={'pointer'} onClick={() => {
+                  onClose()
+                  onOpenLogin()
+                }}>Login</Link>
               </Text>
               <Text fontSize="xs" color="gray.500" mb={4}>
                 By logging in, you agree to our{' '}
@@ -114,7 +146,7 @@ const SignupModal = ({ isOpen, onClose }) => {
             </Box>
           </ModalBody>
         </ModalContent>
-      </Modal>
+      </Modal >
     </>
   );
 };
@@ -123,6 +155,6 @@ export default SignupModal;
 
 SignupModal.propTypes = {
   isOpen: PropTypes.bool,
-  onOpen: PropTypes.func,
   onClose: PropTypes.func,
+  onOpenLogin: PropTypes.func,
 }

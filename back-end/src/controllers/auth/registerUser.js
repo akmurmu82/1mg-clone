@@ -6,7 +6,7 @@ const registerUser = async (req, res) => {
     const { name, email, password } = req.body;
     let existingUser = await UserModel.findOne({ email });
     if (existingUser) {
-      return res.status(404).json({ message: "User already registered!" });
+      return res.status(409).json({ message: "User already registered!" });
     }
 
     // Encrypting the password

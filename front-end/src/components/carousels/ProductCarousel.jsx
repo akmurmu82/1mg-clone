@@ -1,24 +1,25 @@
 import { useRef } from 'react';
 import Slider from 'react-slick';
-import { Box, Image, IconButton } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import NextArrow from "./NextArrow";
 import PrevArrow from "./PrevArrow";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
 
-const CarouselSlider = ({ slides, slidesToShow, autoplay, infinite }) => {
+const ProductCarousel = ({ children }) => {
   const sliderRef = useRef(null);
 
   const settings = {
     dots: true,
-    infinite: infinite,
+    infinite: false,
     speed: 1000, // Transition speed
-    slidesToShow: slidesToShow,
-    slidesToScroll: 1,
-    autoplay: autoplay, // Automatically change slides
-    autoplaySpeed: 2000, // Time between each slide transition
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    autoplay: false, // Automatically change slides
+    autoplaySpeed: 1000, // Time between each slide transition
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     appendDots: (dots) => (
       <Box
         position="absolute"
@@ -39,20 +40,10 @@ const CarouselSlider = ({ slides, slidesToShow, autoplay, infinite }) => {
     <Box h="100%">
       <Slider ref={sliderRef} {...settings}>
         {/* Slide 1 */}
-        {slides.map((slide, ind) => (
-
-          < Box key={ind} >
-            <Image
-              src={slide}
-              alt={`Slide ${ind}`}
-              objectFit="cover"
-            />
-          </Box>
-        ))
-        }
+        {children}
       </Slider >
     </Box >
   );
 };
 
-export default CarouselSlider;
+export default ProductCarousel;
