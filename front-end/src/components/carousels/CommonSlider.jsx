@@ -1,14 +1,13 @@
 import { useRef } from 'react';
 import Slider from 'react-slick';
-import { Box, Image, Text, IconButton } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import NextArrow from "./NextArrow";
 import PrevArrow from "./PrevArrow";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
 
-const CommonSlider = ({ slides, slidesToShow  }) => {
+const CommonSlider = ({ children, slidesToShow=7}) => {
   const sliderRef = useRef(null);
 
   const settings = {
@@ -16,34 +15,32 @@ const CommonSlider = ({ slides, slidesToShow  }) => {
     infinite: false,
     speed: 1000, // Transition speed
     slidesToShow: slidesToShow,
-    slidesToScroll: 1,
-    autoplay: false, // Automatically change slides
-    autoplaySpeed: 1000, // Time between each slide transition
+    slidesToScroll: 6,
+    autoplay: false,
+    autoplaySpeed: 1000,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />
+    prevArrow: <PrevArrow />,
+    appendDots: (dots) => (
+      <Box
+        position="absolute"
+        bottom="10px"
+        left="50%"
+        transform="translateX(-50%)"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        width="100%"
+      >
+        <ul style={{ margin: '0px' }}>{dots}</ul>
+      </Box>
+    ),
   };
 
   return (
-    <Box>
+    <Box h="100%">
       <Slider ref={sliderRef} {...settings}>
-        
-        {slides.map(({title, imgSrc}, ind) => (
-
-          < Box key={ind} p={2} textAlign="center">
-            <Box
-              borderWidth="1px"
-              borderRadius="lg"
-              overflow="hidden"
-              p={3}
-              bg="white"
-              boxShadow="md"
-            >
-              <Image src={imgSrc} alt={title} mb={2} />
-              <Text mt={2} fontWeight="medium">{title}</Text>
-            </Box>
-            </Box>
-        ))
-        }
+        {/* Slide 1 */}
+        {children}
       </Slider >
     </Box >
   );

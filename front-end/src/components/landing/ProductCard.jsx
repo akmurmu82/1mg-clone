@@ -2,7 +2,7 @@ import { Box, Image, Text, VStack, Badge, Flex, HStack } from '@chakra-ui/react'
 
 export default function ProductCard({
   imageUrl,
-  title,
+  name,
   description,
   packageInfo,
   delivery,
@@ -12,10 +12,10 @@ export default function ProductCard({
 }) {
   return (
     <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" p={4} mx={1} cursor={'pointer'}>
-      <Image src={imageUrl} alt={title} height="200px" objectFit="contain" mx="auto" />
+      <Image src={imageUrl} alt={name} height="200px" objectFit="contain" mx="auto" />
       <VStack align="start" mt={4} spacing={2}>
         <Text fontSize={'sm'} noOfLines={2}>
-          {title}
+          {name}
         </Text>
         <Text fontSize="sm" color="gray.600" noOfLines={2}>
           {description}

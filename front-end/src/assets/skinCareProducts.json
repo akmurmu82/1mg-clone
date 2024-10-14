@@ -1,0 +1,204 @@
+{
+    "skinCareProducts": [
+      {
+        "id": 1,
+        "name": "mCaffeine Milky brew Face Scrub Remover",
+        "imageUrl": "https://example.com/mcaffeine-face-scrub.jpg",
+        "packageInfo": "tube of 75.0 gm Scrub",
+        "delivery": "Delivery by 7pm, Today",
+        "mrp": 229,
+        "discountPercentage": 32,
+        "discountedPrice": 156
+      },
+      {
+        "id": 2,
+        "name": "CeraVe Moisturising Lotion for Dry to Very Dry Skin",
+        "imageUrl": "https://example.com/cerave-moisturising-lotion.jpg",
+        "packageInfo": "bottle of 88.0 ml Lotion",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 520,
+        "discountPercentage": 5,
+        "discountedPrice": 494
+      },
+      {
+        "id": 3,
+        "name": "Lacto Calamine Daily Cleansing Wipes with Aloe Vera",
+        "imageUrl": "https://example.com/lacto-calamine-wipes.jpg",
+        "packageInfo": "packet of 25.0 wipes",
+        "delivery": "Delivery by 7pm, Today",
+        "mrp": 150,
+        "discountPercentage": 54,
+        "discountedPrice": 69
+      },
+      {
+        "id": 4,
+        "name": "Savlon Germ Protection Wipes",
+        "imageUrl": "https://example.com/savlon-wipes.jpg",
+        "packageInfo": "packet of 10.0 wipes",
+        "delivery": "Delivery by Tomorrow",
+        "mrp": 49,
+        "discountPercentage": 1,
+        "discountedPrice": 48.5
+      },
+      {
+        "id": 5,
+        "name": "C-Vit Facial Liposomal Serum with AntiOx",
+        "imageUrl": "https://example.com/c-vit-serum.jpg",
+        "packageInfo": "bottle of 30.0 ml Serum",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 2850,
+        "discountPercentage": 0,
+        "discountedPrice": 2850
+      },
+      {
+        "id": 6,
+        "name": "mCaffeine Naked & Raw Coffee Body Scrub",
+        "imageUrl": "https://example.com/mcaffeine-body-scrub.jpg",
+        "packageInfo": "jar of 100.0 gm Scrub",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 449,
+        "discountPercentage": 30,
+        "discountedPrice": 314
+      },
+      {
+        "id": 7,
+        "name": "Lacto Calamine Oil Control Wipes Super Absorbent",
+        "imageUrl": "https://example.com/lacto-calamine-oil-control-wipes.jpg",
+        "packageInfo": "packet of 30.0 wipes",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 99,
+        "discountPercentage": 25,
+        "discountedPrice": 74.3
+      },
+      {
+        "id": 8,
+        "name": "Venusia Max Intensive Moisturizing Lotion",
+        "imageUrl": "https://example.com/venusia-max-lotion.jpg",
+        "packageInfo": "pump bottle of 300.0 gm Lotion",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 801.5,
+        "discountPercentage": 10,
+        "discountedPrice": 722
+      },
+      {
+        "id": 9,
+        "name": "Ahaglow Advanced Skin Rejuvenating Face Wash",
+        "imageUrl": "https://example.com/ahaglow-face-wash.jpg",
+        "packageInfo": "tube of 200.0 gm Face Wash",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 798,
+        "discountPercentage": 12,
+        "discountedPrice": 702
+      },
+      {
+        "id": 10,
+        "name": "Cetaphil Moisturising Cream | Face Care",
+        "imageUrl": "https://example.com/cetaphil-moisturising-cream.jpg",
+        "packageInfo": "tube of 80.0 gm Cream",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 599,
+        "discountPercentage": 15,
+        "discountedPrice": 509
+      },
+      {
+        "id": 11,
+        "name": "Bioderma Sebium Hydra Moisturiser | For Acne Prone Skin",
+        "imageUrl": "https://example.com/bioderma-sebium-hydra.jpg",
+        "packageInfo": "tube of 40.0 ml Moisturiser",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 1195,
+        "discountPercentage": 0,
+        "discountedPrice": 1195
+      },
+      {
+        "id": 12,
+        "name": "Cetaphil DAM Daily Advance Ultra-Hydrating Lotion",
+        "imageUrl": "https://example.com/cetaphil-dam-lotion.jpg",
+        "packageInfo": "tube of 100.0 gm Lotion",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 649,
+        "discountPercentage": 7,
+        "discountedPrice": 604
+      },
+      {
+        "id": 13,
+        "name": "Venusia Max Intensive Moisturizing Cream",
+        "imageUrl": "https://example.com/venusia-max-cream.jpg",
+        "packageInfo": "tube of 150.0 gm Cream",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 671,
+        "discountPercentage": 10,
+        "discountedPrice": 604
+      },
+      {
+        "id": 14,
+        "name": "Physiogel Hypoallergenic Calming Relief Face Cream",
+        "imageUrl": "https://example.com/physiogel-face-cream.jpg",
+        "packageInfo": "bottle of 100.0 ml Lotion",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 660,
+        "discountPercentage": 11,
+        "discountedPrice": 588
+      },
+      {
+        "id": 15,
+        "name": "Excela Moisturiser for Oily & Acne Prone Skin",
+        "imageUrl": "https://example.com/excela-moisturiser.jpg",
+        "packageInfo": "pump bottle of 50.0 gm Cream",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 522,
+        "discountPercentage": 6,
+        "discountedPrice": 489
+      },
+      {
+        "id": 16,
+        "name": "Cetaphil Moisturising Lotion with Avocado Oil",
+        "imageUrl": "https://example.com/cetaphil-avocado-lotion.jpg",
+        "packageInfo": "pump bottle of 500.0 ml Lotion",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 1649,
+        "discountPercentage": 12,
+        "discountedPrice": 1451
+      },
+      {
+        "id": 17,
+        "name": "Biluma Skin Brightening Cream | For Even Skin Tone",
+        "imageUrl": "https://example.com/biluma-brightening-cream.jpg",
+        "packageInfo": "tube of 15.0 gm Cream",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 678,
+        "discountPercentage": 0,
+        "discountedPrice": 678
+      },
+      {
+        "id": 18,
+        "name": "Acnepad Salicylic Acid & Glycolic Acid Wipes",
+        "imageUrl": "https://example.com/acnepad-wipes.jpg",
+        "packageInfo": "packet of 30.0 wipes",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 449,
+        "discountPercentage": 7,
+        "discountedPrice": 417
+      },
+      {
+        "id": 19,
+        "name": "Saslic DS Foaming Face Wash with Salicylic Acid",
+        "imageUrl": "https://example.com/saslic-face-wash.jpg",
+        "packageInfo": "bottle of 60.0 ml Face Wash",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 495,
+        "discountPercentage": 13,
+        "discountedPrice": 431
+      },
+      {
+        "id": 20,
+        "name": "Demelan Cream with Glycolic Acid, Arbutin & Kojic Acid",
+        "imageUrl": "https://example.com/demelan-cream.jpg",
+        "packageInfo": "tube of 20.0 gm Cream",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 544.5,
+        "discountPercentage": 12,
+        "discountedPrice": 479
+      }
+    ]
+  }

@@ -3,7 +3,7 @@
       {
         "id": 1,
         "imageUrl": "https://example.com/vimpro-protein.jpg",
-        "title": "Vimpro Protein with ALA, Inositol & Biotin",
+        "name": "Vimpro Protein with ALA, Inositol & Biotin",
         "description": "High-quality protein powder for muscle growth and recovery",
         "packageInfo": "jar of 400.0 gm Powder",
         "delivery": "Delivery by 10pm, Today",
@@ -14,7 +14,7 @@
       {
         "id": 2,
         "imageUrl": "https://example.com/zingavita-omega3.jpg",
-        "title": "Zingavita Omega 3 Fish Oil 1000mg Soft Gelatin Capsule",
+        "name": "Zingavita Omega 3 Fish Oil 1000mg Soft Gelatin Capsule",
         "description": "Supports heart, brain, and joint health",
         "packageInfo": "bottle of 60.0 soft gelatin capsules",
         "delivery": "Delivery by 10pm, Today",
@@ -25,7 +25,7 @@
       {
         "id": 3,
         "imageUrl": "https://example.com/dabur-hepano.jpg",
-        "title": "Dabur Hepano Tablet | For Liver Care & Detoxification",
+        "name": "Dabur Hepano Tablet | For Liver Care & Detoxification",
         "description": "Ayurvedic formula for liver health and detoxification",
         "packageInfo": "bottle of 60.0 tablets",
         "delivery": "Delivery by 10pm, Today",
@@ -36,7 +36,7 @@
       {
         "id": 4,
         "imageUrl": "https://example.com/himalaya-ashvagandha.jpg",
-        "title": "Himalaya Wellness Ashvagandha Tablet | Stress Relief",
+        "name": "Himalaya Wellness Ashvagandha Tablet | Stress Relief",
         "description": "Natural stress reliever and energy booster",
         "packageInfo": "bottle of 60.0 tablets",
         "delivery": "Delivery by 10pm, Today",
@@ -47,7 +47,7 @@
       {
         "id": 5,
         "imageUrl": "https://example.com/nasoclear-spray.jpg",
-        "title": "Nasoclear Saline Nasal Spray | Provides Relief from Nasal Congestion",
+        "name": "Nasoclear Saline Nasal Spray | Provides Relief from Nasal Congestion",
         "description": "Gentle saline spray for nasal congestion relief",
         "packageInfo": "bottle of 20.0 ml Nasal Spray",
         "delivery": "Delivery by 10pm, Today",
@@ -58,7 +58,7 @@
       {
         "id": 6,
         "imageUrl": "https://example.com/faceshop-toner.jpg",
-        "title": "The Face Shop Rice & Ceramide Moisturizing Toner",
+        "name": "The Face Shop Rice & Ceramide Moisturizing Toner",
         "description": "Hydrating toner for smooth and supple skin",
         "packageInfo": "bottle of 150.0 ml Toner",
         "delivery": "Delivery by 10pm, Today",
@@ -69,7 +69,7 @@
       {
         "id": 7,
         "imageUrl": "https://example.com/himalaya-rumalaya.jpg",
-        "title": "Himalaya Rumalaya Forte Tablets | Helps in Joint Pain Relief",
+        "name": "Himalaya Rumalaya Forte Tablets | Helps in Joint Pain Relief",
         "description": "Herbal formula for joint pain and inflammation",
         "packageInfo": "strip of 30.0 tablets",
         "delivery": "Delivery by 10pm, Today",
@@ -80,7 +80,7 @@
       {
         "id": 8,
         "imageUrl": "https://example.com/cetaphil-cleanser.jpg",
-        "title": "Cetaphil Gentle Skin Cleanser | For All Skin Types",
+        "name": "Cetaphil Gentle Skin Cleanser | For All Skin Types",
         "description": "Mild, soap-free cleanser for sensitive skin",
         "packageInfo": "bottle of 250.0 ml Liquid",
         "delivery": "Delivery by 10pm, Today",
@@ -91,7 +91,7 @@
       {
         "id": 10,
         "imageUrl": "https://example.com/vimpro-protein.jpg",
-        "title": "Vimpro Protein with ALA, Inositol & Biotin",
+        "name": "Vimpro Protein with ALA, Inositol & Biotin",
         "description": "High-quality protein powder for muscle growth and recovery",
         "packageInfo": "jar of 400.0 gm Powder",
         "delivery": "Delivery by 10pm, Today",
@@ -102,7 +102,7 @@
       {
         "id": 12,
         "imageUrl": "https://example.com/zingavita-omega3.jpg",
-        "title": "Zingavita Omega 3 Fish Oil 1000mg Soft Gelatin Capsule",
+        "name": "Zingavita Omega 3 Fish Oil 1000mg Soft Gelatin Capsule",
         "description": "Supports heart, brain, and joint health",
         "packageInfo": "bottle of 60.0 soft gelatin capsules",
         "delivery": "Delivery by 10pm, Today",
@@ -113,7 +113,7 @@
       {
         "id": 13,
         "imageUrl": "https://example.com/dabur-hepano.jpg",
-        "title": "Dabur Hepano Tablet | For Liver Care & Detoxification",
+        "name": "Dabur Hepano Tablet | For Liver Care & Detoxification",
         "description": "Ayurvedic formula for liver health and detoxification",
         "packageInfo": "bottle of 60.0 tablets",
         "delivery": "Delivery by 10pm, Today",
@@ -124,7 +124,7 @@
       {
         "id": 14,
         "imageUrl": "https://example.com/himalaya-ashvagandha.jpg",
-        "title": "Himalaya Wellness Ashvagandha Tablet | Stress Relief",
+        "name": "Himalaya Wellness Ashvagandha Tablet | Stress Relief",
         "description": "Natural stress reliever and energy booster",
         "packageInfo": "bottle of 60.0 tablets",
         "delivery": "Delivery by 10pm, Today",
@@ -135,7 +135,7 @@
       {
         "id": 15,
         "imageUrl": "https://example.com/nasoclear-spray.jpg",
-        "title": "Nasoclear Saline Nasal Spray | Provides Relief from Nasal Congestion",
+        "name": "Nasoclear Saline Nasal Spray | Provides Relief from Nasal Congestion",
         "description": "Gentle saline spray for nasal congestion relief",
         "packageInfo": "bottle of 20.0 ml Nasal Spray",
         "delivery": "Delivery by 10pm, Today",
@@ -146,7 +146,7 @@
       {
         "id": 16,
         "imageUrl": "https://example.com/faceshop-toner.jpg",
-        "title": "The Face Shop Rice & Ceramide Moisturizing Toner",
+        "name": "The Face Shop Rice & Ceramide Moisturizing Toner",
         "description": "Hydrating toner for smooth and supple skin",
         "packageInfo": "bottle of 150.0 ml Toner",
         "delivery": "Delivery by 10pm, Today",
@@ -157,7 +157,7 @@
       {
         "id": 9,
         "imageUrl": "https://example.com/himalaya-rumalaya.jpg",
-        "title": "Himalaya Rumalaya Forte Tablets | Helps in Joint Pain Relief",
+        "name": "Himalaya Rumalaya Forte Tablets | Helps in Joint Pain Relief",
         "description": "Herbal formula for joint pain and inflammation",
         "packageInfo": "strip of 30.0 tablets",
         "delivery": "Delivery by 10pm, Today",
@@ -168,7 +168,7 @@
       {
         "id": 10,
         "imageUrl": "https://example.com/cetaphil-cleanser.jpg",
-        "title": "Cetaphil Gentle Skin Cleanser | For All Skin Types",
+        "name": "Cetaphil Gentle Skin Cleanser | For All Skin Types",
         "description": "Mild, soap-free cleanser for sensitive skin",
         "packageInfo": "bottle of 250.0 ml Liquid",
         "delivery": "Delivery by 10pm, Today",
