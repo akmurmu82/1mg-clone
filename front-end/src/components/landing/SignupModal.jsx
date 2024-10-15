@@ -19,6 +19,7 @@ import PropTypes from 'prop-types';
 import axios from "axios";
 import { useState } from 'react';
 const baseBackendUrl = import.meta.env.VITE_BASE_BACKEND_API
+console.log(baseBackendUrl)
 
 const SignupModal = ({ isOpen, onClose, onOpenLogin }) => {
   const [email, setEmail] = useState("")

@@ -1,0 +1,194 @@
+{
+    "superSavingDeals": [
+      {
+        "id": 1,
+        "name": "Unienyzme Digestive Enzymes for Digestion",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/tr1vanqnw0okd6dopsub.jpg",
+        "packageInfo": "bottle of 200.0 ml Liquid",
+        "delivery": "Delivery in 30 mins",
+        "mrp": 154.4,
+        "discountPercentage": 8,
+        "discountedPrice": 142
+      },
+      {
+        "id": 2,
+        "name": "SheNeed Hair Supplement with Folic Acid",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/gtolvbimoj3ztpp81mbu.jpg",
+        "packageInfo": "bottle of 60.0 capsules",
+        "delivery": "Delivery by Fri, 18 Oct",
+        "mrp": 499,
+        "discountPercentage": 17,
+        "discountedPrice": 414
+      },
+      {
+        "id": 3,
+        "name": "Clocip Anti-Fungal Dusting Powder | For Skin Infections",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/64a94710d705446a80b590f3a8ce32e0.jpg",
+        "packageInfo": "bottle of 100.0 gm Dusting Powder",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 140,
+        "discountPercentage": 31,
+        "discountedPrice": 96.8
+      },
+      {
+        "id": 4,
+        "name": "Cofils Experdine Gargle | Mouth Wash",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/9fcbce13ff1646d9a4eecbcc10d4873c.jpg",
+        "packageInfo": "bottle of 100.0 ml Gargle",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 170,
+        "discountPercentage": 27,
+        "discountedPrice": 124
+      },
+      {
+        "id": 5,
+        "name": "SheNeed Plant Based Daily Women's Protein",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/0d69962716ef4fd0a70b3a735e74cf42.jpg",
+        "packageInfo": "jar of 300.0 gm Powder",
+        "delivery": "Delivery by Fri, 18 Oct",
+        "mrp": 999,
+        "discountPercentage": 30,
+        "discountedPrice": 699
+      },
+      {
+        "id": 6,
+        "name": "Eloway Aloe Vera Moisturizing Gel",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/vm0xusrjauv2tis4whpn.jpg",
+        "packageInfo": "box of 100.0 gm Gel",
+        "delivery": "Delivery by Thu, 17 Oct",
+        "mrp": 125,
+        "discountPercentage": 10,
+        "discountedPrice": 113
+      },
+      {
+        "id": 7,
+        "name": "Dr. Morepen Marine Skin Protein with Collagen",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/f1d177708e08426da2dc47c12ef3c1d8.jpg",
+        "packageInfo": "jar of 250.0 gm Powder",
+        "delivery": "Delivery by 10pm, Tomorrow",
+        "mrp": 1799,
+        "discountPercentage": 40,
+        "discountedPrice": 1079
+      },
+      {
+        "id": 8,
+        "name": "Easylax L Oral Solution Lemon Sugar Free",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/shfpkggram7uvubuxqkg.jpg",
+        "packageInfo": "bottle of 200.0 ml Oral Solution",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 258.3,
+        "discountPercentage": 17,
+        "discountedPrice": 214
+      },
+      {
+        "id": 9,
+        "name": "Omnigel Pain Relief from Sprain, Injury, Backache",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/182923092d21419697b41c5be8492a2b.jpg",
+        "packageInfo": "tube of 100.0 gm Gel",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 286,
+        "discountPercentage": 30,
+        "discountedPrice": 200
+      },
+      {
+        "id": 10,
+        "name": "Combo Pack of Tata 1mg Hot Water Bag & Pain Relief Spray",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/f483f14f-bb96-4074-b464-3d04aaa4107f.jpeg",
+        "packageInfo": "combo pack of 2.0 Packs",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 690,
+        "discountPercentage": 26,
+        "discountedPrice": 510
+      },
+      {
+        "id": 11,
+        "name": "Combo Pack of Tata 1mg Pain Relief Spray & Tablets",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/70522d56ceff4e7992f38618612a2a79.jpg",
+        "packageInfo": "combo pack of 2.0 Packs",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 379,
+        "discountPercentage": 37,
+        "discountedPrice": 240
+      },
+      {
+        "id": 12,
+        "name": "Tata 1mg Pain Relief Gel for Lower Back Pain",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/c45739082db14ba3bd65b583f7ce7b67.jpg",
+        "packageInfo": "tube of 75.0 gm Gel",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 240,
+        "discountPercentage": 35,
+        "discountedPrice": 155
+      },
+      {
+        "id": 13,
+        "name": "Gemsoline Soft Gelatin Capsule from Medley",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/xx6fevxvibax95onp1fz.jpg",
+        "packageInfo": "strip of 15.0 soft gelatin capsules",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 286,
+        "discountPercentage": 27,
+        "discountedPrice": 209
+      },
+      {
+        "id": 14,
+        "name": "Combo Pack of Tata 1mg Pain Relief Spray & Medicated Patch",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/27448045b48c4ead96ec56a7f81b8ea9.jpg",
+        "packageInfo": "combo pack of 2.0 Packs",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 355,
+        "discountPercentage": 43,
+        "discountedPrice": 201
+      },
+      {
+        "id": 15,
+        "name": "Prega News Advance Pregnancy Rapid Test Kit",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/glf3gtf8fxprj5nwrrgq.jpg",
+        "packageInfo": "box of 1.0 Test Kit",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 120,
+        "discountPercentage": 3,
+        "discountedPrice": 116
+      },
+      {
+        "id": 19,
+        "name": "Tata 1mg Pain Relief Spray for Lower Back Pain",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/64735dde-84b5-48c8-b9f8-c028ca6d310f.jpeg",
+        "packageInfo": "bottle of 100.0 gm Spray",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 295,
+        "discountPercentage": 47,
+        "discountedPrice": 156
+      },
+      {
+        "id": 16,
+        "name": "Cipcal D3 (Cholecalciferol) Granules",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/f71ea55f57ba4f1eaa2d3b5f3e590ef7.jpg",
+        "packageInfo": "sachet of 1.0 gm Granules",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 38.05,
+        "discountPercentage": 32,
+        "discountedPrice": 25.9
+      },
+      {
+        "id": 17,
+        "name": "Combo Pack of Tata 1mg Elbow Support & Pain Relief Spray",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/2f8e3c11ca3f4f40865cd44dd8ad693a.jpg",
+        "packageInfo": "combo pack of 2.0 Packs",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 490,
+        "discountPercentage": 28,
+        "discountedPrice": 355
+      },
+      {
+        "id": 18,
+        "name": "Prolyte ORS Combo Pack of Ready To Drink",
+        "imageUrl": "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/b18bde012a9a442e8382f4c3b9ebc896.jpg",
+        "packageInfo": "combo pack of 2.0 units",
+        "delivery": "Delivery in 15 mins",
+        "mrp": 63,
+        "discountPercentage": 24,
+        "discountedPrice": 47.9
+      }
+    ]
+  }

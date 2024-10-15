@@ -4,12 +4,14 @@
 import { Box } from "@chakra-ui/react";
 import AllRoutes from "./AllRoutes";
 import Navbar from "./components/navbar/Navbar";
+import FooterSection from "./components/footer/Footer";
 
 function App() {
   return (
     <Box>
       <Navbar />
       <AllRoutes />
+      <FooterSection />
     </Box>
   );
 }

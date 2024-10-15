@@ -15,8 +15,8 @@ const ProductCarousel = ({ heading, data = [] }) => {
     dots: true,
     infinite: false,
     speed: 1000, // Transition speed
-    slidesToShow: 6,
-    slidesToScroll: 6,
+    slidesToShow: 7,
+    slidesToScroll: 7,
     autoplay: false,
     autoplaySpeed: 1000,
     nextArrow: <NextArrow />,

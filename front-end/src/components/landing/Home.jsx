@@ -6,6 +6,7 @@ import ProductCard from "./ProductCard";
 import ProductCarousel from "../carousels/ProductCarousel";
 import { products } from "../../assets/db.json";
 import { collagenProducts } from "../../assets/collagen.json";
+import { superSavingDeals } from "../../assets/superSavingDeals.json";
 console.log(products)
 
 function LandingPage() {
@@ -105,6 +106,11 @@ function LandingPage() {
         {/* Product Cards Section */}
         <Box p={5}>
           <ProductCarousel heading="Collagen | supplement of the week" data={collagenProducts} />
+        </Box>
+
+        {/* Super Saving Deals Cards Section */}
+        <Box p={5}>
+          <ProductCarousel heading="Super saving deals" data={superSavingDeals} />
         </Box>
       </Box>
     </div>
