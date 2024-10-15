@@ -1,6 +1,8 @@
 import { Box, Image, Text, VStack, Badge, Flex, HStack } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
 
 export default function ProductCard({
+  _id,
   imageUrl,
   name,
   description,
@@ -10,9 +12,16 @@ export default function ProductCard({
   discountPercentage,
   discountedPrice,
 }) {
+  const navigate = useNavigate()
+
+  const handleSelectProduct = async () => {
+    console.log(_id)
+    navigate(`/product/${_id}`)
+  }
+
   return (
-    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" p={4} mx={1} cursor={'pointer'} bg="#fff">
-      <Image src={imageUrl} alt={name} height="200px" objectFit="contain"/>
+    <Box onClick={handleSelectProduct} maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" p={4} mx={1} cursor={'pointer'} bg="#fff">
+      <Image src={imageUrl} alt={name} height="200px" objectFit="contain" />
       <VStack align="start" mt={4} spacing={2}>
         <Text fontSize={'sm'} noOfLines={2}>
           {name}

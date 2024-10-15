@@ -15,20 +15,39 @@ import {
     InputRightAddon,
     InputRightElement,
     useDisclosure,
+    Badge,
 } from '@chakra-ui/react';
 import { FiChevronDown } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
 import { RiShoppingCart2Line } from "react-icons/ri";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MdMyLocation } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import LoginModal from "../landing/LoginModal"
 import SignupModal from "../landing/SignupModal"
-
+import { useEffect, useState } from 'react';
 const Navbar = () => {
+    const navigate = useNavigate()
 
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { isOpen: isOpenSignup, onOpen: onOpenSignup, onClose: onCloseSignup } = useDisclosure();
+    const [itemInCart, setItemInCart] = useState("")
+
+    useEffect(() => {
+        let userCart = JSON.parse(localStorage.getItem("userCart")) || [];
+        setItemInCart(userCart.length)
+    }, [])
+
+    useEffect(() => {
+        const handleUpdateStorage = () => {
+            const updatedCart = JSON.parse(localStorage.getItem("userCart")) || [];
+            setItemInCart(updatedCart.length)
+        }
+
+        window.addEventListener("storage", handleUpdateStorage)
+
+        return () => { window.removeEventListener("storage", handleUpdateStorage) }
+    }, [])
 
     return (
         <Box bg="white" boxShadow="sm">
@@ -70,7 +89,10 @@ const Navbar = () => {
                     <Link>
                         Offers
                     </Link>
-                    <IconButton color={'black'} aria-label="Cart" fontSize={'2xl'} variant={'link'} icon={<RiShoppingCart2Line />} mr={4} />
+                    <Flex mr={4}>
+                        <IconButton color={'black'} aria-label="Cart" fontSize={'2xl'} variant={'link'} icon={<RiShoppingCart2Line />} onClick={() => navigate('/cart-page')} />
+                        <Badge ml={-2} mb={2}>{itemInCart}</Badge>
+                    </Flex>
                     <Link>Need Help?</Link>
                 </Flex>
             </Flex>

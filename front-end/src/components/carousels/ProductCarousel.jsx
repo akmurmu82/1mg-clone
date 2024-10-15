@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import { Box, Heading } from '@chakra-ui/react';
 import 'slick-carousel/slick/slick.css';
@@ -10,6 +10,7 @@ import ProductCard from '../landing/ProductCard';
 
 const ProductCarousel = ({ heading, data = [] }) => {
   const sliderRef = useRef(null);
+
 
   const settings = {
     dots: true,
@@ -44,6 +45,7 @@ const ProductCarousel = ({ heading, data = [] }) => {
         {data.map((product, ind) => (
           <ProductCard
             key={ind}
+            _id={product._id.toString()}
             imageUrl={product.imageUrl}
             name={product.name}
             description={product.description}

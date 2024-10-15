@@ -117,6 +117,7 @@ const SignupModal = ({ isOpen, onClose, onOpenLogin }) => {
                 placeholder="Enter Password"
                 mb={4}
                 value={password}
+                type="password"
                 onChange={(e) => setPassword(e.target.value)}
                 borderColor="red.500"
                 focusBorderColor="red.500"

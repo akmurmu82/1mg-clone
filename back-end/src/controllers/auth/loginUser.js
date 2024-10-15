@@ -22,7 +22,7 @@ const loginUser = async (req, res) => {
 
     const token = jwt.sign({ userId: existingUser._id }, jwtSecret);
 
-    res.status(200).json({ data: existingUser, token });
+    res.status(200).json({ user: existingUser, token });
   } catch (error) {
     res
       .status(500)

@@ -14,10 +14,18 @@ import {
     Progress,
     HStack,
     Icon,
+    useToast,
 } from '@chakra-ui/react';
 import { FaBox, FaMoneyBillWave, FaThumbsUp, FaTruck } from 'react-icons/fa6';
 import { IoNotificationsCircleOutline } from 'react-icons/io5';
 import { IoMdStar } from "react-icons/io";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+const baseBackendApi = import.meta.env.VITE_BASE_BACKEND_API;
+let userCart = JSON.parse(localStorage.getItem("userCart")) || [];
+const authUser = JSON.parse(localStorage.getItem("authUser"))
+console.log(userCart)
 
 
 const reviews = [
@@ -44,28 +52,74 @@ const RatingBar = ({ rating, percentage }) => (
     </Flex>
 )
 
+
 function ProductPage() {
+    const { _id } = useParams()
+    const [product, setProduct] = useState({})
+    const toast = useToast()
+
+    const handleAddToCart = () => {
+        if (!userCart.includes(product)) {
+            userCart.push(product)
+            toast({
+                position: "top",
+                title: "Product added to cart.",
+                description: "",
+                status: "success",
+                duration: 9000,
+                isClosable: true,
+            });
+            localStorage.setItem("userCart", JSON.stringify(userCart))
+        } else {
+            toast({
+                position: "top",
+                title: "Product is already in the cart.",
+                description: "",
+                status: "warning",
+                duration: 9000,
+                isClosable: true,
+            });
+        }
+    }
+
+    useEffect(() => {
+        const getProductData = async () => {
+            try {
+                let res = await axios.get(`${baseBackendApi}/products/${_id}`, {
+                    headers: {
+                        'Authorization': `Bearer ${authUser.token}`
+                    }
+                })
+                console.log(res.data.data)
+                setProduct(res.data.data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        getProductData()
+    }, [])
+
     return (
         <Box p={5} bg="gray.50">
             {/* Main Product Section */}
             <Flex flexWrap="wrap" maxW="1200px" mx="auto">
                 {/* Image Gallery */}
                 <VStack w="10%" spacing={3}>
-                    <Image src="image1.jpg" alt="Product Image 1" boxSize="70px" />
-                    <Image src="image2.jpg" alt="Product Image 2" boxSize="70px" />
-                    <Image src="image3.jpg" alt="Product Image 3" boxSize="70px" />
-                    <Image src="image4.jpg" alt="Product Image 4" boxSize="70px" />
+                    <Image src={product.imageUrl} alt="Product Image 1" boxSize="70px" objectFit="contain" />
+                    <Image src={product.imageUrl} alt="Product Image 2" boxSize="70px" objectFit="contain" />
+                    <Image src={product.imageUrl} alt="Product Image 3" boxSize="70px" objectFit="contain" />
+                    <Image src={product.imageUrl} alt="Product Image 4" boxSize="70px" objectFit="contain" />
                 </VStack>
 
                 {/* Main Product Image */}
-                <Box w="20%" mr={5}>
-                    <Image src="main-product-image.jpg" alt="Main Product" boxSize="300px" />
-                    <Image src="discount-banner.jpg" alt="Discount Banner" mt={4} />
+                <Box w="auto" mr={5}>
+                    <Image src={product.imageUrl} alt="Main Product" boxSize="300px" objectFit="contain" />
+                    {/* <Image src="discount-banner.jpg" alt="Discount Banner" mt={4} /> */}
                 </Box>
 
                 {/* Product Details */}
                 <VStack w="35%" mr={3} align="flex-start" spacing={4} >
-                    <Heading size="md">Zingavita Biotin Tablet with Zinc, Vitamin C & E</Heading>
+                    <Heading size="md">{product.name}</Heading>
                     <Text fontSize="sm" color="gray.500">Adthera Consumer Brands Pvt Ltd</Text>
                     <Badge colorScheme="green" p={1}>4 ★</Badge>
                     <Text fontSize="sm" color="gray.500">220 Ratings & 41 Reviews</Text>
@@ -85,8 +139,8 @@ function ProductPage() {
 
 
                 {/* Price and Offers Section */}
-                <VStack w="30%" borderRadius={"20px"} bg="white" p={4} boxShadow="md" spacing={3}>
-                    <Text fontSize="2xl" fontWeight="bold">₹215</Text>
+                <VStack w="25%" borderRadius={"20px"} bg="white" p={4} boxShadow="md" spacing={3}>
+                    <Text fontSize="2xl" fontWeight="bold">₹{product.mrp}</Text>
                     <Text fontSize="sm" color="gray.500">Inclusive of all taxes</Text>
                     <RadioGroup defaultValue="1">
                         <Stack direction="row" spacing={5}>
@@ -94,7 +148,7 @@ function ProductPage() {
                             <Radio value="2">2 Bottles</Radio>
                         </Stack>
                     </RadioGroup>
-                    <Button colorScheme="red" w="full">Add to Cart</Button>
+                    <Button colorScheme="red" w="full" onClick={handleAddToCart}>Add to Cart</Button>
 
                     {/* Delivery Information Section */}
                     <Box bg="green.50" p={3} mt={5} maxW="1200px" mx="auto" boxShadow="md">

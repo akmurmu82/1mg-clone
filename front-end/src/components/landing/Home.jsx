@@ -7,9 +7,27 @@ import ProductCarousel from "../carousels/ProductCarousel";
 import { products } from "../../assets/db.json";
 import { collagenProducts } from "../../assets/collagen.json";
 import { superSavingDeals } from "../../assets/superSavingDeals.json";
-console.log(products)
+import axios from "axios"
+import { useEffect, useState } from "react";
+const baseBackendApi = import.meta.env.VITE_BASE_BACKEND_API;
 
 function LandingPage() {
+
+  const [dbProducts, setDbProducts] = useState([])
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        let { data } = await axios.get(`${baseBackendApi}/products`)
+        console.log(data.data)
+        setDbProducts(data.data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getProducts()
+  }, [])
+
   const topSlides = [
     "https://onemg.gumlet.io/8ebddacf-a999-42b9-ab0f-2acf2897382e_1728235820.jpg?w=899&h=200&format=auto",
     "https://onemg.gumlet.io/bba94753-2883-43af-93e9-d26a0523346c_1725600489.png?w=899&h=200&format=auto",
@@ -99,18 +117,14 @@ function LandingPage() {
 
         {/* Product Cards Section */}
         <Box p={5}>
-          <ProductCarousel heading="Products" data={products} />
-        </Box>
-
-
-        {/* Product Cards Section */}
-        <Box p={5}>
-          <ProductCarousel heading="Collagen | supplement of the week" data={collagenProducts} />
+          {/* <ProductCarousel heading="Collagen | supplement of the week" data={collagenProducts} /> */}
+          <ProductCarousel heading="Collagen | supplement of the week" data={[...dbProducts].splice(0, 20)} />
         </Box>
 
         {/* Super Saving Deals Cards Section */}
         <Box p={5}>
-          <ProductCarousel heading="Super saving deals" data={superSavingDeals} />
+          {/* <ProductCarousel heading="Super saving deals" data={superSavingDeals} /> */}
+          <ProductCarousel heading="Super saving deals" data={[...dbProducts].splice(20)} />
         </Box>
       </Box>
     </div>

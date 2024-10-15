@@ -30,7 +30,7 @@ const LoginModal = ({ isOpen, onClose, onOpenSignup }) => {
       let res = await axios.post(`${baseBackendUrl}/auth/login`, { email, password })
       console.log(res)
       if (res.status == 200) {
-        localStorage.setItem("authToken", JSON.stringify(res.data.token))
+        localStorage.setItem("authUser", JSON.stringify(res.data))
         setErrorMessage("")
         toast({
           position: "top",
@@ -107,6 +107,7 @@ const LoginModal = ({ isOpen, onClose, onOpenSignup }) => {
                 placeholder="Enter Password"
                 name={"password"}
                 value={password}
+                type="password"
                 onChange={(e) => setPassword(e.target.value)}
                 mb={4}
                 borderColor="red.500"
