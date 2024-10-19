@@ -14,7 +14,6 @@ import {
     InputLeftAddon,
     InputRightAddon,
     InputRightElement,
-    useDisclosure,
     Badge,
 } from '@chakra-ui/react';
 import { FiChevronDown } from "react-icons/fi";
@@ -26,11 +25,12 @@ import { IoLocationSharp } from "react-icons/io5";
 import LoginModal from "../landing/LoginModal"
 import SignupModal from "../landing/SignupModal"
 import { useEffect, useState } from 'react';
+import { useModal } from '../../utils/ModalContext';
+// import { isOpenLogin } from '../../';
+
 const Navbar = () => {
     const navigate = useNavigate()
-
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    const { isOpen: isOpenSignup, onOpen: onOpenSignup, onClose: onCloseSignup } = useDisclosure();
+    const { loginDisclosure, signupDisclosure } = useModal()
     const [itemInCart, setItemInCart] = useState("")
 
     useEffect(() => {
@@ -77,15 +77,15 @@ const Navbar = () => {
                 {/* Right Section (Offers, Login, Cart) */}
                 <Flex alignItems="center" justifyContent="space-between" w={'26%'}>
 
-                    <Button bg="transparent" _hover={{ bg: "transparent" }} onClick={onOpen}>
+                    <Button bg="transparent" _hover={{ bg: "transparent" }} onClick={loginDisclosure.onOpen}>
                         Login
                     </Button>
-                    <LoginModal isOpen={isOpen} onClose={onClose} onOpenSignup={onOpenSignup} />
+                    <LoginModal isOpen={loginDisclosure.isOpen} onClose={loginDisclosure.onClose} onOpenSignup={signupDisclosure.onOpen} />
                     <Divider color={'black'} orientation='vertical' h={'20px'} />
-                    <Button bg="transparent" _hover={{ bg: "transparent" }} onClick={onOpenSignup}>
+                    <Button bg="transparent" _hover={{ bg: "transparent" }} onClick={signupDisclosure.onOpen}>
                         Sign Up
                     </Button>
-                    <SignupModal isOpen={isOpenSignup} onOpen={onOpenSignup} onOpenLogin={onOpen} onClose={onCloseSignup} />
+                    <SignupModal isOpen={signupDisclosure.isOpen} onOpen={signupDisclosure.onOpen} onOpenLogin={loginDisclosure.onOpen} onClose={signupDisclosure.onClose} />
                     <Link>
                         Offers
                     </Link>

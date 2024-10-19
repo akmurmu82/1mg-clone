@@ -1,0 +1,22 @@
+useSlice.js
+
+- initialState
+- userSlice
+export { } userSlice.actions;
+export default userSlice.reducer
+
+
+store.js
+
+- persistConfig
+- rootReducers: combineReducers
+- persistedReducer: persistReducer
+- store: configureStore
+- persistor = psersistStore
+
+export { persistor, store }
+
+
+main.jsx
+- Provider(store)
+- PersistGate(persistor)
